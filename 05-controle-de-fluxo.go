@@ -109,16 +109,16 @@ OPCIONAL (Recomendado para prática avançada):
 
 func main() {
 	// TODO: Implemente a solução do desafio aqui
-	
+
 	// Dica: Use if/else para classificar salário
 	// Dica: Use switch para calcular bônus por departamento
 	// Dica: Calcule valor do bônus = salario * (percentual / 100)
-	
+
 	// Exemplo de estrutura:
 	// cargo := "Desenvolvedor"
 	// salario := 4500.0
 	// departamento := "TI"
-	// 
+	//
 	// var faixaSalarial string
 	// if salario < 3000 {
 	//     faixaSalarial = "Júnior"
@@ -127,7 +127,7 @@ func main() {
 	// } else {
 	//     faixaSalarial = "Sênior"
 	// }
-	// 
+	//
 	// var percentualBonus float64
 	// switch departamento {
 	// case "TI":
@@ -139,8 +139,36 @@ func main() {
 	// default:
 	//     percentualBonus = 0.0
 	// }
-	// 
+	//
 	// bonus := salario * (percentualBonus / 100)
 	// fmt.Printf("Cargo: %s\nSalário: R$ %.2f\nFaixa: %s\nDepartamento: %s\nBônus: R$ %.2f (%.1f%%)\n", ...)
-}
 
+	type Employee struct {
+		job        string
+		salary     float64
+		department string
+		bonus      int
+	}
+
+	employee := []Employee{
+		{
+			job:        "Programador",
+			salary:     3000.00,
+			department: "TI",
+			bonus:      10,
+		},
+		{
+			job:        "Auxiliar administrativo",
+			salary:     5000.00,
+			department: "RH",
+			bonus:      10,
+		},
+		{
+			job:        "Programador",
+			salary:     2000.000,
+			department: "Vendas",
+			bonus:      20,
+		},
+	}
+
+}

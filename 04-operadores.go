@@ -91,7 +91,19 @@ INSTRUÇÕES:
 4. Calcule o valor final e exiba os detalhes
 */
 
+import "fmt"
+
 func main() {
+	type Compra struct {
+		IsVip bool
+		price float64
+	}
+
+	compra := Compra{
+		IsVip: true,
+		price: 56.00,
+	}
+
 	// TODO: Implemente a solução do desafio aqui
 
 	// Dica: Use operadores de comparação para verificar condições
@@ -112,4 +124,11 @@ func main() {
 	//
 	// valorFinal := valorCompra - desconto
 	// fmt.Printf("Valor original: R$ %.2f\nDesconto: R$ %.2f\nValor final: R$ %.2f\n", ...)
+
+	if compra.price > 50.00 {
+		discount := compra.price * 0.10
+		newPrice := compra.price - discount
+
+		fmt.Printf("Valor original: R$ %.2f\nDesconto: R$ %.2f\nValor final: R$ %.2f\n", compra.price, discount, newPrice)
+	}
 }
